@@ -1,15 +1,13 @@
 import { useState } from 'react'
 import './App.css'
+import MainPage from './assets/pages/MainPage'
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-
-       </div>
-
+    <MainPage />
     </>
   )
 }
