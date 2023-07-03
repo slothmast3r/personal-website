@@ -6,7 +6,7 @@ import './Navigation.scss'
 const locations = [
   {
     name: "Home",
-    path: "/"
+    path: "#home"
   },
   {
     name: "About me",

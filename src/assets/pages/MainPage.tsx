@@ -5,7 +5,6 @@ function MainPage(){
 
     return(
         <>
-            <Navigaiton></Navigaiton>
             <h1>Main Page</h1>
         </>
     )
