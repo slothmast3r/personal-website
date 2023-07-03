@@ -1,24 +1,40 @@
 import React from "react";
-import { Navbar, Nav } from "react-bootstrap";
+import './Navigation.scss'
+
+
+
+const locations = [
+  {
+    name: "Home",
+    path: "/"
+  },
+  {
+    name: "About me",
+    path: "#about"
+  },
+  {
+    name: "Projects",
+    path: "#projects"
+  },
+  {
+    name: "Contact",
+    path: "#contact"
+  }
+]
 
 function Navigation(){
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
-      <Navbar.Brand href="#home">
-        {' '}
-        My Website
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ml-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#about">About</Nav.Link>
-          <Nav.Link href="#portfolio">Portfolio</Nav.Link>
-          <Nav.Link href="#contact">Contact</Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
-  );
+    <nav className="nav">
+      <a href="/" className="site-logo">Site</a>
+      <ul>
+        {locations.map(location => (
+          <li key={location.path}>
+            <a href={location.path}>{location.name}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )
 };
 
 export default Navigation;
