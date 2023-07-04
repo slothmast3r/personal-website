@@ -50,7 +50,7 @@ function Navigation(){
 
   return (
     <nav className="nav">
-      <a href="/" className="site-logo">Site</a>
+      <a href="/" className="site-logo">OSKAR</a>
       <ul>
         {locations.map(location => (
           <li key={location.path} className={location.path === activePath ? "active" : ""}>
