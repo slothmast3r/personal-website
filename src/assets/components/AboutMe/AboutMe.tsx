@@ -21,7 +21,7 @@ export default function AboutMe() {
   </tr>
   <tr>
     <th>Email</th>
-    <td>Oskar Straszynski</td>
+    <td>oskar@straszynski.pl</td>
   </tr>
   <tr>
     <th>Phone</th>
