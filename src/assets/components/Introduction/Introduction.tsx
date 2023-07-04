@@ -15,22 +15,14 @@ export default function Introduction(){
     return(<>
      <Slider {...settings}>
       <div>
-        <h3>1</h3>
+        <div>
+        <h3 className="accent">Hello!</h3>
+        <h1>I'm <span className="accent">Oskar Straszyński</span></h1>
+        <h2>A freelance Web Developer</h2>
+        </div>
       </div>
       <div>
         <h3>2</h3>
-      </div>
-      <div>
-        <h3>3</h3>
-      </div>
-      <div>
-        <h3>4</h3>
-      </div>
-      <div>
-        <h3>5</h3>
-      </div>
-      <div>
-        <h3>6</h3>
       </div>
     </Slider>
     </>)
