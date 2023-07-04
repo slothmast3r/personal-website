@@ -12,7 +12,7 @@ const settings = {
 
 export default function Introduction() {
   return (
-    <>
+    <div id="home">
       <Slider {...settings}>
         <div>
           <div className="introduction-content">
@@ -35,6 +35,6 @@ export default function Introduction() {
           <h3>2</h3>
         </div>
       </Slider>
-    </>
+    </div>
   );
 }
