@@ -13,3 +13,42 @@ body{
 *{
   box-sizing: border-box;
 }
+
+.primary-button{
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+
+  border: none;
+  padding: 0.5rem 1.0rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  // margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 1rem;
+
+  &:active{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+
+  }
+
+}
+.secondary-button{
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  
+  border: 1px solid var(--secondary-color);
+  padding: 0.5rem 1.0rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 1rem;
+  &:active{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+
+  }
+
+}

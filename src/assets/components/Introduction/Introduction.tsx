@@ -19,6 +19,8 @@ export default function Introduction(){
         <h3 className="accent">Hello!</h3>
         <h1>I'm <span className="accent">Oskar Straszyński</span></h1>
         <h2>A freelance Web Developer</h2>
+        <button className="primary-button">Contact me</button>
+        <button className="secondary-button"> Work </button>
         </div>
       </div>
       <div>
