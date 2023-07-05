@@ -6,7 +6,10 @@ export default function AboutMe() {
     <div className="about-me-container" id="about">
       <img src="https://via.placeholder.com/500" alt="Placeholder Image" />
       <div>
-        <h2>About me</h2>
+        <div className="text-container">
+        <h2 className="small-text-bg">About me</h2>
+        <h3 className="big-text-bg">About</h3>
+        </div>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
             voluptatum, quibusdam, quia, quae voluptates voluptatem quod

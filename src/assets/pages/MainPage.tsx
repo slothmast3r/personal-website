@@ -1,7 +1,8 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import {Introduction} from '../components/Introduction';
+import { Introduction } from '../components/Introduction';
 import { AboutMe } from "../components/AboutMe";
+import { Resume } from "../components/Resume";
 
 
 function MainPage() {
@@ -10,6 +11,7 @@ function MainPage() {
         <>
        <Introduction></Introduction>
        <AboutMe></AboutMe>
+       <Resume></Resume>
         </>
     );
 }
