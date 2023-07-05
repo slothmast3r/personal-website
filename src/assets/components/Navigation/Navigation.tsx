@@ -37,6 +37,7 @@ function Navigation(){
     event.preventDefault();
     const hash = event.currentTarget.hash;
     const target = document.querySelector(hash);
+    window.location.hash = hash;
     if (target) {
       const offset = target.getBoundingClientRect().top + window.pageYOffset;
       window.scrollTo({
@@ -44,7 +45,6 @@ function Navigation(){
         behavior: "smooth"
       });
     }
-    window.location.hash = hash;
 
   };
 

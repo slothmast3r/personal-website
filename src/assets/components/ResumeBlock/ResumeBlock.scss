@@ -1,5 +1,26 @@
-.block-container{
-    text-align: left;
-
-    
+.block-container {
+  text-align: left;
+  background-color: rgba(white, 0.1);
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 30px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  .date-period {
+    font-weight: 900;
+    font-size: 26px;
+    color: var(--accent-color);
+  }
+  .subtitle {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  .description{
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
 }

@@ -20,9 +20,9 @@ export default function ResumeBlock({
       <p className="date-period">
         {yearFrom} - {yearTo}
       </p>
-      <h1>{title}</h1>
-      <h2>{subtitle}</h2>
-      <p>{description}</p>
+      <h2 className="title">{title}</h2>
+      <span className="subtitle">{subtitle}</span>
+      <p className="description">{description}</p>
     </div>
   );
 }
