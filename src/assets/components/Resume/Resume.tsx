@@ -7,7 +7,7 @@ export default function Resume() {
         <h3 className="small-text-bg">Resume</h3>
         <h4 className="big-text-bg">Resume</h4>
       </div>
-      <ResumeBlock></ResumeBlock>
+      <ResumeBlock title="Title" subtitle="subtitle" description="desc" yearFrom={2} yearTo={2}></ResumeBlock>
         
     </>
   );
