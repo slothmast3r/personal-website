@@ -22,7 +22,13 @@ const locations = [
 
 function Navigation(){
   const [activePath, setActivePath] = useState(window.location.hash);
+  const [isChecked, setIsChecked] = useState(false);
 
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setIsChecked(event.target.checked);
+
+    console.log(isChecked)
+  };
   useEffect(() => {
     const handleHashChange = () => {
       setActivePath(window.location.hash);
@@ -51,6 +57,14 @@ function Navigation(){
   return (
     <nav className="nav">
       <a href="/" className="site-logo">OSKAR</a>
+      <input type="checkbox" name="" onChange={handleInputChange} checked={isChecked} id="input__menu-toggle" className="menu-toggle"></input>
+      <label htmlFor="input__menu-toggle" className={`label-for-menu ${isChecked ? 'active' : ''}`}>
+        <div className="burger">
+          <div className="one"></div>
+          <div className="two"></div>
+          <div className="three"></div>
+        </div>
+      </label>
       <ul>
         {locations.map(location => (
           <li key={location.path} className={location.path === activePath ? "active" : ""}>
