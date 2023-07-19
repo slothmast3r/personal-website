@@ -19,6 +19,10 @@ const locations = [
     path: "#skills"
   },
   {
+    name: "Projects",
+    path: "#projects"
+  },
+  {
     name: "Contact",
     path: "#contact"
   }
