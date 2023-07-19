@@ -11,8 +11,12 @@ const locations = [
     path: "#about"
   },
   {
-    name: "Projects",
-    path: "#projects"
+    name: "Resume",
+    path: "#resume"
+  },
+  {
+    name: "Skills",
+    path: "#skills"
   },
   {
     name: "Contact",
@@ -26,16 +30,33 @@ function Navigation(){
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setIsChecked(event.target.checked);
-
-    console.log(isChecked)
   };
+
   useEffect(() => {
     const handleHashChange = () => {
       setActivePath(window.location.hash);
     };
+
+    const handleScroll = () => {
+      for (let i = locations.length - 1; i >= 0; i--) {
+        const location = locations[i];
+        const element = document.querySelector(location.path);
+        if (element && element.getBoundingClientRect().top <= 200) {
+          if (window.location.hash !== location.path) {
+            window.history.replaceState(null, '', location.path);
+          }
+          setActivePath(location.path);
+          break;
+        }
+      }
+    };
+
     window.addEventListener("hashchange", handleHashChange);
+    window.addEventListener("scroll", handleScroll);
+
     return () => {
       window.removeEventListener("hashchange", handleHashChange);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -43,7 +64,7 @@ function Navigation(){
     event.preventDefault();
     const hash = event.currentTarget.hash;
     const target = document.querySelector(hash);
-    window.location.hash = hash;
+    window.history.pushState(null, '', hash);
     if (target) {
       const offset = target.getBoundingClientRect().top + window.pageYOffset;
       window.scrollTo({
@@ -51,7 +72,7 @@ function Navigation(){
         behavior: "smooth"
       });
     }
-
+    setIsChecked(false);
   };
 
   return (
