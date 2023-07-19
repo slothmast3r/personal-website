@@ -5,6 +5,7 @@ import { AboutMe } from "../components/AboutMe";
 import { Resume } from "../components/Resume";
 import { Skills } from "../components/Skills";
 import { Projects } from "../components/Projects";
+import { Blog } from "../components/Blog";
 
 
 function MainPage() {
@@ -16,6 +17,7 @@ function MainPage() {
        <Resume></Resume>
        <Skills></Skills>
        <Projects></Projects>
+       <Blog></Blog>
         </>
     );
 }
