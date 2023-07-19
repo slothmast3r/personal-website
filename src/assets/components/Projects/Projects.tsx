@@ -1,4 +1,4 @@
-import "Projects.scss";
+import "./Projects.scss";
 export default function Projects() {
   return (
     <div id="projects">
