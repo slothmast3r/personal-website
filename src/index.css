@@ -20,4 +20,12 @@
   -webkit-text-size-adjust: 100%;
 }
 
+@font-face {
+  font-family: 'IcoMoon'; /* Choose a name for referencing */
+  src: url('./assets/fonts/IcoMoon.ttf') format('truetype'); /* Adjust path if necessary */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 

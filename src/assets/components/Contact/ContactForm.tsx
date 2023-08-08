@@ -2,7 +2,7 @@ import React from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import emailjs from "emailjs-com";
-
+import "./ContactForm.scss";
 const emailjsServiceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
 const emailjsTemplateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 const emailjsUserID = import.meta.env.VITE_EMAILJS_USER_ID;
@@ -56,17 +56,26 @@ const ContactForm = () => {
       onSubmit={onSubmit}
     >
       {({ isSubmitting }) => (
-        <Form id="contact-form">
+        <Form id="contact-form" className="contact-section">
+        <div className="field-wrapper">
           <Field type="text" name="name" placeholder="Your Name" />
-          <ErrorMessage name="name" component="div" />
+          <ErrorMessage className="ErrorMessage" name="name" component="div" />
+        </div>
+        
+        <div className="field-wrapper">
           <Field type="email" name="email" placeholder="Your Email" />
-          <ErrorMessage name="email" component="div" />
+          <ErrorMessage className="ErrorMessage" name="email" component="div" />
+        </div>
+        
+        <div className="field-wrapper">
           <Field as="textarea" name="message" placeholder="Your Message" />
-          <ErrorMessage name="message" component="div" />
-          <button type="submit" disabled={isSubmitting}>
-            {isSubmitting ? "Please wait..." : "Submit"}
-          </button>
-        </Form>
+          <ErrorMessage className="ErrorMessage" name="message" component="div" />
+        </div>
+        
+        <button type="submit" disabled={isSubmitting}>
+          {isSubmitting ? "Please wait..." : "Send Message"}
+        </button>
+      </Form>
       )}
     </Formik>
   );

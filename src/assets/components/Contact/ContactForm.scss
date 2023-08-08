@@ -1,0 +1,55 @@
+.contact-section {
+  background-color: white;
+  padding: 3rem; // This adds some space inside the white background for your fields
+  margin: 0 auto; // This centers the form in its parent container
+
+  .field-wrapper {
+    position: relative;
+    margin-bottom: 1.5rem;
+
+    textarea{
+        resize: vertical;
+    }
+
+    Field,
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.5rem; // Adds some internal space to the fields
+      margin-bottom: 1rem; // Spacing between the field and its error message
+      border: 1px solid #ccc; // Some basic styling
+      border-radius: 4px;
+
+      &:focus {
+        border-color: #007bff;
+        outline: none;
+      }
+    }
+
+    .ErrorMessage {
+      position: absolute;
+      bottom: -20px;
+      left: 10px;
+      color: red;
+    }
+  }
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #555;
+  }
+
+  &:disabled {
+    background-color: #ddd;
+    color: #aaa;
+    cursor: not-allowed;
+  }
+}
